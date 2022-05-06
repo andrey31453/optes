@@ -1,0 +1,48 @@
+.header__menu
+	width: 100%
+	padding-top: var(--psecs)
+	padding-bottom: var(--psecs)
+
+.header__menu__item
+	&.__logo
+		@media (max-width: $m)
+			height: 28px
+			position: absolute
+			left: calc(50% - 50px)
+			top: 10px
+			img
+				width: 100px
+	&.__country span
+		position: relative
+
+		padding-right: 10px
+		padding-left: 10px
+		padding-top: 1px
+
+		color: $c2
+		&:hover
+			color: $c2a
+			&::before
+				border-color: $c2a
+		&::before
+			position: absolute
+			content: ''
+
+			border: 2px solid $c2
+			border-radius: 50%
+			@media (min-width: $d)
+				top: -8px
+				left: 1px
+				width: 40px
+				height: 40px
+			@media (max-width: $m)
+				top: -5px
+				left: 4px
+				width: 30px
+				height: 30px
+
+.header__menu__item
+	&:not(.__logo)
+		padding-left: var(--pl)
+	&:not(.__country)
+		padding-right: 24px

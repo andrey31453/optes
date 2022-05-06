@@ -2,14 +2,26 @@
 section
 	padding-top: var(--psec)
 	padding-bottom: var(--psec)
-	@media (max-width: $m)
-		padding-top: var(--psecm)
-		padding-bottom: var(--psecm)
 
 	&.section--bg-grad
-		background-image: linear-gradient($deg, $bcgin, $bcgto)
+		background-image: linear-gradient($deg, $bcgin 0%, $bcgininto 30%, $bcgintoto 70%, $bcgto 100%)
+		color: $fc2
 	&.section--bg-dark
 		background-color: $bcg2
+		color: $c
 	&.section--bg-img
-		@extend .bi
-		background-image: url('images/__template/images/background.png')
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+
+			background-image: url('images/__template/images/background.png')
+			background-position: -60px 60px
+		.container
+			position: relative
+			z-index: 1

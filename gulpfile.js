@@ -20,6 +20,7 @@ const html_src = [
 const sass_src = [
   'app/__template/_preset.sass',
   'app/**/_preset.sass',
+  'app/**/_proekt.sass',
   'app/__template/*.sass',
   'app/**/*.sass',
 ]

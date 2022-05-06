@@ -1,27 +1,10 @@
-.preview__texts
-	padding-top: var(--p)
-	padding-bottom: var(--p)
-	@media (max-width: $m)
-		text-align: center
-		padding-top: 0
-		padding-bottom: 0
-	& > *
-		padding: var(--p)
-		@media (max-width: $m)
-			max-width: 468px
-			padding: 0
-
 .preview__text
 	width: 50%
 	font-family: "stolzl_light"
+	div
+		max-width: 468px
 	@media (max-width: $m)
 		width: 100%
 		margin-left: auto
 		margin-right: auto
 		margin-bottom: 0
-	&:not(.__contrast)
-		font-weight: 600
-	div
-		max-width: 470px
-		@media (max-width: $m)
-			max-width: 100%

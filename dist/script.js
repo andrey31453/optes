@@ -107,5 +107,3 @@
   }
   window.addEventListener('load', styleUpdate)
 }
-
-// _____________

@@ -1,28 +1,31 @@
+:root
+	@media (min-width: $d)
+		--btn-height: 60px
+	@media (max-width: $m)
+		--btn-height: 45px
+
 .btn
 	display: inline-block
 
-	border-width: $bw
-	border-style: solid
-	border-radius: 50%
+	border-radius: calc(0.5 *var(--btn-height))
 	font-family: "stolzl_book"
 	font-weight: 700
-	&:not(.btn--cntrl)
+	height: var(--btn-height)
+	font-size: var(--fzbtn)
+	line-height: var(--lhbtn)
+	&
 		color: $c
-		border-color: $c
-		&:hover
-			color: $c2a
-	&.btn--cntrl
-		color: $c2
-		border-color: $c2
+		border: $bw solid $c
 		&:hover
 			color: $fcgto
+			border-color: $fcgto
+	&.btn--cntrl
+		color: $c2
+		border: $bw solid $c2
+		&:hover
+			color: $c2a
+			border-color: $c2a
 	@media (min-width: $d)
-		height: 60px
-		font-size: var(--fzbtn)
-		line-height: var(--lhbtn)
 		padding: 19px 40px 18px 40px
 	@media (max-width: $m)
-		height: 45px
-		font-size: var(--fzbtn)
-		line-height: var(--lhbtn)
 		padding: 14px 25px 15px 25px
