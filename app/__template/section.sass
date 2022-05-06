@@ -1,0 +1,15 @@
+// section
+section
+	padding-top: var(--psec)
+	padding-bottom: var(--psec)
+	@media (max-width: $m)
+		padding-top: var(--psecm)
+		padding-bottom: var(--psecm)
+
+	&.section--bg-grad
+		background-image: linear-gradient($deg, $bcgin, $bcgto)
+	&.section--bg-dark
+		background-color: $bcg2
+	&.section--bg-img
+		@extend .bi
+		background-image: url('images/__template/images/background.png')
