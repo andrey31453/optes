@@ -1,0 +1,82 @@
+:root
+	@media (min-width: $d)
+		--country-half: 20px
+	@media (max-width: $m)
+		--country-half: 16px
+
+.country
+	// span
+	span
+		position: relative
+		width: calc(2 * var(--country-half))
+
+		padding-right: 5px
+		padding-left: 12px
+		padding-top: 1px
+
+		color: $c2
+		cursor: pointer
+		&::before
+			position: absolute
+			content: ''
+
+			border: 2px solid $c2
+			border-radius: var(--country-half)
+			@media (min-width: $d)
+				top: -18px
+				left: 1px
+				width: calc(2 * var(--country-half))
+				height: calc(2 * var(--country-half))
+			@media (max-width: $m)
+				top: -15px
+				left: 7px
+				width: calc(2 * var(--country-half))
+				height: calc(2 * var(--country-half))
+	// a
+	a
+		position: absolute
+		padding-top: 0
+		padding-bottom: 0
+		&:hover
+			color: $c2a
+		@media (min-width: $d)
+			top: -10px
+			&.ru
+				left: 9px
+			&.en
+				left: 10px
+			&.ee
+				left: 10px
+		@media (max-width: $m)
+			top: -11px
+			&.ru
+				left: 11px
+			&.en
+				left: 11px
+			&.ee
+				left: 11px
+		&:first-child
+			z-index: 15
+		&:not(:first-child)
+			opacity: 0
+	// media
+	@media (min-width: $d)
+		&:hover
+			a
+				opacity: 1
+			span:before
+				height: 100px
+			a:nth-child(2)
+				top: 18px
+			a:nth-child(3)
+				top: 46px
+	@media (max-width: $m)
+		&.countrys--active
+			a
+				opacity: 1
+			span:before
+				height: 78px
+			a:nth-child(2)
+				top: 12px
+			a:nth-child(3)
+				top: 34px
