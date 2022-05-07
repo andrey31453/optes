@@ -51,9 +51,9 @@
 }
 @media (max-width: 768px) {
   :root {
-    --psecs: 30px;
-    --psecs: 60px;
-    --psec: 90px;
+    --psecs: 25px;
+    --psec: 50px;
+    --psecl: 75px;
   }
 }
 
@@ -100,7 +100,7 @@
 }
 @media (max-width: 768px) {
   :root {
-    --gallery-height: 1000px;
+    --gallery-height: 800px;
   }
 }
 
@@ -130,11 +130,11 @@
 }
 
 .header {
-  padding-bottom: calc(0.5 * var(--gallery-height) + var(--p-sec));
+  padding-bottom: calc(0.5 * var(--gallery-height) + var(--psec));
 }
 
 .preview {
-  padding-top: calc(0.5 * var(--gallery-height) + var(--p-sec));
+  padding-top: calc(0.5 * var(--gallery-height) + var(--psec));
 }
 
 @font-face {
@@ -568,8 +568,18 @@ section.section--bg-img::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("images/__template/images/background.png");
-  background-position: -60px 60px;
+}
+@media (min-width: 769px) {
+  section.section--bg-img::before {
+    background-image: url("images/__template/images/background-d.png");
+    background-position: -60px 60px;
+  }
+}
+@media (max-width: 768px) {
+  section.section--bg-img::before {
+    background-image: url("images/__template/images/background-m.png");
+    background-position: -20px -20px;
+  }
 }
 section.section--bg-img .container {
   position: relative;
@@ -652,7 +662,7 @@ table {
 @media (min-width: 769px) {
   .advantages__item {
     max-width: 330px;
-    width: 33%;
+    width: calc(33% - 0.6666666667 * var(--psec));
   }
 }
 @media (max-width: 768px) {
@@ -765,14 +775,30 @@ table {
 }
 
 .footer {
-  padding-top: calc(var(--psecs) - var(--p));
   padding-bottom: calc(var(--psecs) - var(--p));
   font-family: "stolzl_book";
   font-size: var(--fzfooter);
 }
 @media (min-width: 769px) {
+  .footer {
+    padding-top: calc(var(--psecs) - var(--p));
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-top: var(--psecs);
+  }
+}
+@media (min-width: 769px) {
   .footer a {
     margin-left: var(--psecs);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__item {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -788,22 +814,66 @@ table {
 .gallery__items {
   height: var(--gallery-height);
 }
+@media (max-width: 768px) {
+  .gallery__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .gallery__item {
-  width: 25%;
   overflow: hidden;
 }
-.gallery__item:nth-child(1) {
-  height: 98%;
+@media (min-width: 769px) {
+  .gallery__item {
+    width: 25%;
+  }
+  .gallery__item:nth-child(1) {
+    height: 98%;
+  }
+  .gallery__item:nth-child(2) {
+    height: 82%;
+  }
+  .gallery__item:nth-child(3) {
+    height: 92%;
+  }
+  .gallery__item:nth-child(4) {
+    height: 100%;
+  }
 }
-.gallery__item:nth-child(2) {
-  height: 82%;
-}
-.gallery__item:nth-child(3) {
-  height: 91%;
-}
-.gallery__item:nth-child(4) {
-  height: 100%;
+@media (max-width: 768px) {
+  .gallery__item {
+    width: 50%;
+  }
+  .gallery__item:nth-child(1) {
+    height: 50%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .gallery__item:nth-child(2) {
+    height: 42%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .gallery__item:nth-child(3) {
+    height: 38%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .gallery__item:nth-child(4) {
+    height: 42%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .gallery__item img {
   width: auto;
@@ -844,8 +914,8 @@ table {
 }
 .header__menu__item.__country span {
   position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 0;
+  padding-left: 12px;
   padding-top: 1px;
   color: #60e3ff;
 }
@@ -894,18 +964,25 @@ table {
   max-width: 900px;
 }
 
-.preview__text {
-  width: 50%;
-}
-.preview__text.__basic {
-  font-size: var(--fzl);
-}
-.preview__text div {
-  max-width: 500px;
+@media (min-width: 769px) {
+  .preview__text {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   .preview__text {
     width: 100%;
     margin-bottom: 0;
   }
+}
+.preview__text.__basic {
+  font-size: var(--fzl);
+}
+@media (max-width: 768px) {
+  .preview__text.__basic {
+    margin-bottom: var(--psecs);
+  }
+}
+.preview__text div {
+  max-width: 500px;
 }

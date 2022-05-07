@@ -11,7 +11,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="images/template/icon/favicon.ico"
+      href="images/__template/icon/favicon.ico"
     />
 
     <link
@@ -46,7 +46,16 @@
 
         <!-- header__menu__item -->
         <a class="header__menu__item __logo" href="/">
-          <img src="images/header/images/logo.png" alt="логотип TinyTot" />
+          <img
+            class="d"
+            src="images/header/images/logo.png"
+            alt="логотип TinyTot"
+          />
+          <img
+            class="m"
+            src="images/header/images/logo-m.png"
+            alt="логотип TinyTot"
+          />
         </a>
         <!-- /header__menu__item -->
       </div>
@@ -94,18 +103,22 @@
 </section>
 
 <section class="gallery" id="gallery">
-  <div class="gallery__items f fnw">
+  <div class="gallery__items f">
     <div class="gallery__item fcolc">
-      <img src="images/gallery/images/1.jpg" />
+      <img class="d" src="images/gallery/images-d/1.jpg" />
+      <img class="m" src="images/gallery/images-m/1.jpg" />
     </div>
     <div class="gallery__item fcolc faife">
-      <img src="images/gallery/images/2.jpg" />
+      <img class="d" src="images/gallery/images-d/2.jpg" />
+      <img class="m" src="images/gallery/images-m/2.jpg" />
     </div>
     <div class="gallery__item fcolc faifs">
-      <img src="images/gallery/images/3.jpg" />
+      <img class="d" src="images/gallery/images-d/3.jpg" />
+      <img class="m" src="images/gallery/images-m/3.jpg" />
     </div>
     <div class="gallery__item fcolc faife">
-      <img src="images/gallery/images/4.jpg" />
+      <img class="d" src="images/gallery/images-d/4.jpg" />
+      <img class="m" src="images/gallery/images-m/4.jpg" />
     </div>
   </div>
 </section>
@@ -291,11 +304,13 @@
   </div>
 </section>
 
-<section class="footer section--bg-grad section--bg-img">
+<section class="footer section--bg-grad section--bg-img" id="footer">
   <div class="container">
     <div class="fc">
-      <div>Optes Baltic OÜ</div>
-      <a class="hover-link" href="mailto:info@optes.ee">info@optes.ee</a>
+      <div class="footer__item">Optes Baltic OÜ</div>
+      <a class="footer__item hover-link" href="mailto:info@optes.ee"
+        >info@optes.ee</a
+      >
     </div>
   </div>
 </section>

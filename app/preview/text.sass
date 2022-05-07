@@ -1,9 +1,12 @@
 .preview__text
-	width: 50%
-	&.__basic
-		font-size: var(--fzl)
-	div
-		max-width: 500px
+	@media (min-width: $d)
+		width: 50%
 	@media (max-width: $m)
 		width: 100%
 		margin-bottom: 0
+	&.__basic
+		font-size: var(--fzl)
+		@media (max-width: $m)
+			margin-bottom: var(--psecs)
+	div
+		max-width: 500px

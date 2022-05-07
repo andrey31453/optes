@@ -1,8 +1,16 @@
 .footer
-	padding-top: calc(var(--psecs) - var(--p))
 	padding-bottom: calc(var(--psecs) - var(--p))
 	font-family: "stolzl_book"
 	font-size: var(--fzfooter)
+	@media (min-width: $d)
+		padding-top: calc(var(--psecs) - var(--p))
+	@media (max-width: $m)
+		padding-top: var(--psecs)
 	a
 		@media (min-width: $d)
 			margin-left: var(--psecs)
+
+.footer__item
+	@media (max-width: $m)
+		width: 100%
+		text-align: center

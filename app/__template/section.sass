@@ -19,9 +19,12 @@ section
 			left: 0
 			right: 0
 			bottom: 0
-
-			background-image: url('images/__template/images/background.png')
-			background-position: -60px 60px
+			@media (min-width: $d)
+				background-image: url('images/__template/images/background-d.png')
+				background-position: -60px 60px
+			@media (max-width: $m)
+				background-image: url('images/__template/images/background-m.png')
+				background-position: -20px -20px
 		.container
 			position: relative
 			z-index: 1

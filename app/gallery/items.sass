@@ -1,0 +1,45 @@
+.gallery
+	position: relative
+	z-index: 10
+
+	margin-top: calc(-0.5 * var(--gallery-height))
+	margin-bottom: calc(-0.5 * var(--gallery-height))
+
+	padding-top: 0
+	padding-bottom: 0
+
+.gallery__items
+	height: var(--gallery-height)
+	@media (max-width: $m)
+		flex-direction: column
+		justify-content: center
+
+.gallery__item
+	overflow: hidden
+	@media (min-width: $d)
+		width: 25%
+		&:nth-child(1)
+			height: 98%
+		&:nth-child(2)
+			height: 82%
+		&:nth-child(3)
+			height: 92%
+		&:nth-child(4)
+			height: 100%
+	@media (max-width: $m)
+		width: 50%
+		&:nth-child(1)
+			height: 50%
+			justify-content: flex-end
+		&:nth-child(2)
+			height: 42%
+			justify-content: flex-start
+		&:nth-child(3)
+			height: 38%
+			justify-content: flex-end
+		&:nth-child(4)
+			height: 42%
+			justify-content: flex-start
+	img
+		width: auto
+		min-width: 100%
