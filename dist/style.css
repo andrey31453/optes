@@ -1102,6 +1102,16 @@ table {
   }
 }
 
+body.ee .lang:not(.lang--ee) {
+  display: none;
+}
+body.ru .lang:not(.lang--ru) {
+  display: none;
+}
+body.en .lang:not(.lang--en) {
+  display: none;
+}
+
 .headerm-menu-btn {
   width: 50px;
   height: 25px;
