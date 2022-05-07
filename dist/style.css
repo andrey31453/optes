@@ -15,8 +15,8 @@
 }
 @media (max-width: 768px) {
   :root {
-    --fzh1: 32px;
-    --lhh1: 36px;
+    --fzh1: 30px;
+    --lhh1: 34px;
     --fzh2: 30px;
     --fzh3: 18px;
     --fzl: 24px;
@@ -158,8 +158,15 @@
   }
 }
 
-.preview {
-  padding-top: calc(0.5 * var(--gallery-height) + var(--psec));
+@media (min-width: 769px) {
+  .preview {
+    padding-top: calc(0.5 * var(--gallery-height) + var(--psec));
+  }
+}
+@media (max-width: 768px) {
+  .preview {
+    padding-top: calc(0.5 * var(--gallery-height) + var(--psecs));
+  }
 }
 
 @font-face {

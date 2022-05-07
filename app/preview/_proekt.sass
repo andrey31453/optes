@@ -1,2 +1,5 @@
 .preview
-	padding-top: calc(0.5 * var(--gallery-height) + var(--psec))
+	@media (min-width: $d)
+		padding-top: calc(0.5 * var(--gallery-height) + var(--psec))
+	@media (max-width: $m)
+		padding-top: calc(0.5 * var(--gallery-height) + var(--psecs))
