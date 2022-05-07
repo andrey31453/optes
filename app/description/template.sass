@@ -1,7 +1,11 @@
 .description
-	padding-top: var(--psecl)
-	padding-bottom: var(--psecl)
 	overflow: hidden
+	@media (min-width: $d)
+		padding-top: var(--psecl)
+		padding-bottom: var(--psecl)
+	@media (max-width: $m)
+		.btn
+			margin-top: var(--psec)
 
 .description__heading
 	margin-left: auto
@@ -24,18 +28,30 @@
 	@extend .z1
 	margin-top: var(--psecs)
 	margin-bottom: var(--psecs)
-	margin-left: calc(-0.8 * var(--psec))
-	width: calc(100% + 0.8 * var(--psec))
+	@media (min-width: $d)
+		margin-left: calc(-0.8 * var(--psec))
+		width: calc(100% + 0.8 * var(--psec))
+	@media (max-width: $m)
+		width: 100%
 
 .description__img--2
 	@extend .right
 	@extend .z2
-	width: 60%
-	margin-top: -25%
-	margin-bottom: var(--psec)
-	margin-right: calc(-0.4 * var(--psec))
+	@media (min-width: $d)
+		width: 60%
+		margin-top: -25%
+		margin-bottom: var(--psec)
+		margin-right: calc(-0.4 * var(--psec))
+	@media (max-width: $m)
+		width: 55%
+		margin-top: -60%
+		margin-bottom: var(--psecs)
+		z-index: 5
 
 .description__img--3
 	@extend .left
 	@extend .z3
-	width: 65%
+	@media (min-width: $d)
+		width: 65%
+	@media (max-width: $m)
+		width: 55%

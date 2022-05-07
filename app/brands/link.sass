@@ -1,11 +1,19 @@
 .brands__links
 	padding-top: var(--psecs)
-	column-gap: var(--psec)
-	row-gap: var(--psecs)
+	@media (max-width: $m)
+		gap: var(--pl)
+	@media (min-width: $d)
+		column-gap: var(--psec)
+		row-gap: var(--psecs)
 	@media (min-width: $dxl)
 		column-gap: 120px
 
-.brands__link.extra-padding
-	@media (min-width: $dxl)
-		padding-left: var(--psecs)
-		padding-right: var(--psecs)
+.brands__link
+	@media (max-width: $m)
+		width: calc(50% - var(--pl))
+		img
+			max-width: 100%
+	.extra-padding
+		@media (min-width: $dxl)
+			padding-left: var(--psecs)
+			padding-right: var(--psecs)

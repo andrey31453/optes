@@ -1,2 +1,5 @@
 .header
-	padding-bottom: calc(0.5 * var(--gallery-height) + var(--psec))
+	@media (min-width: $d)
+		padding-bottom: calc(0.5 * var(--gallery-height) + var(--psec))
+	@media (max-width: $m)
+		padding-bottom: calc(0.5 * var(--gallery-height) + var(--psecs))
