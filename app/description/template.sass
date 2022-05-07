@@ -4,8 +4,11 @@
 	overflow: hidden
 
 .description__heading
-	text-align: center
+	margin-left: auto
+	margin-right: auto
 	margin-bottom: var(--psec)
+	max-width: 950px
+	text-align: center
 
 .description__content
 	@media (min-width: $d)
@@ -21,18 +24,18 @@
 	@extend .z1
 	margin-top: var(--psecs)
 	margin-bottom: var(--psecs)
-	margin-left: calc(-0.6 * var(--psec))
-	width: calc(100% + 1.2 * var(--psec))
+	margin-left: calc(-0.8 * var(--psec))
+	width: calc(100% + 0.8 * var(--psec))
 
 .description__img--2
 	@extend .right
 	@extend .z2
-	width: 70%
-	margin-top: -15%
+	width: 60%
+	margin-top: -25%
 	margin-bottom: var(--psec)
-	margin-right: calc(-0.6 * var(--psec))
+	margin-right: calc(-0.4 * var(--psec))
 
 .description__img--3
 	@extend .left
 	@extend .z3
-	width: 70%
+	width: 65%

@@ -1,8 +1,19 @@
 .container
 	width: 100%
 	margin: 0 auto
-	max-width: calc(var(--mw) + 2 * var(--pl))
-	@media (min-width: $d)
-		padding: 0 var(--pl)
+	// padding
 	@media (max-width: $m)
 		padding: 0 var(--p)
+	@media (min-width: $d)
+		padding: 0 var(--pl)
+	// max-width
+	@media (min-width: $dxs)
+		max-width: calc(var(--dxs) - 2 * var(--p))
+	@media (min-width: $ds)
+		max-width: calc(var(--ds) - 2 * var(--p))
+	@media (min-width: $dm)
+		max-width: calc(var(--dm) - 2 * var(--p))
+	@media (min-width: $dl)
+		max-width: calc(var(--dl) - 2 * var(--p))
+	@media (min-width: $dxl)
+		max-width: calc(var(--dxl) - 2 * var(--p))

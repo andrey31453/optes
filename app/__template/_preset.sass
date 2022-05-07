@@ -2,6 +2,7 @@
 // color 
 //
 $c: #f6522a
+$ca: #ff3200
 
 $c2: #60e3ff
 $c2a: #caf6ff
@@ -16,14 +17,16 @@ $fc2: #ffffff
 $bw: 2px
 
 // grad
-$deg: 150deg
+$degf: 150deg
 
 $fcgin: $c
 $fcgto: #8b6bab
 
+$degb: 135deg
+
 $bcgin: #2871f9
-$bcgininto: #2871f9
-$bcgintoto: #6717cd
+$bcgininto: #2060df
+$bcgintoto: #5c27d0
 $bcgto: #6717cd
 
 $bcg2: #091327
@@ -39,14 +42,17 @@ $d: $m + 1px
 // d
 :root
 	@media (min-width: $d)
-		--fzh1: 55px
-		--lhh1: 65px
-		--fzh2: 48px
+		--fzh1: 64px
+		--lhh1: 74px
+		--fzh2: 50px
 		--fzh3: 30px
 
-		--fz: 20px
+		--fz: 24px
 		--lh: 40px
+		--fzl: 36px
 
+		--fzmenu: 16px
+		--fzfooter: 20px
 		--fzbtn: 18px
 		--lhbtn: 22px
 	@media (max-width: $m)
@@ -57,7 +63,10 @@ $d: $m + 1px
 
 		--fz: 14px
 		--lh: 20px
+		--fzl: 30px
 
+		--fzmenu: 17px
+		--fzfooter: 18px
 		--fzbtn: 16px
 		--lhbtn: 18px
 
@@ -66,12 +75,13 @@ $d: $m + 1px
 //
 
 :root
-	--ps: 9px
+	// basic
 	--pl: 30px
 	@media (min-width: $d)
 		--p: 12px
 	@media (max-width: $m)
-		--pm: 8px
+		--p: 8px
+
 	// section
 	@media (min-width: $d)
 		--psecs: 50px
@@ -90,6 +100,13 @@ $dl: 992px
 $dm: 768px
 $ds: 576px
 $dxs: 450px
+
+:root
+	--dxl: 1200px
+	--dl: 992px
+	--dm: 768px
+	--ds: 576px
+	--dxs: 450px
 
 // max-width
 :root
