@@ -4,9 +4,9 @@
     --lhh1: 74px;
     --fzh2: 50px;
     --fzh3: 30px;
+    --fzl: 36px;
     --fz: 24px;
     --lh: 40px;
-    --fzl: 36px;
     --fzmenu: 16px;
     --fzfooter: 20px;
     --fzbtn: 18px;
@@ -15,17 +15,17 @@
 }
 @media (max-width: 768px) {
   :root {
-    --fzh1: 24px;
-    --lhh1: 28px;
+    --fzh1: 32px;
+    --lhh1: 36px;
     --fzh2: 30px;
     --fzh3: 18px;
+    --fzl: 24px;
     --fz: 14px;
     --lh: 20px;
-    --fzl: 30px;
-    --fzmenu: 17px;
-    --fzfooter: 18px;
-    --fzbtn: 16px;
-    --lhbtn: 18px;
+    --fzmenu: 16px;
+    --fzfooter: 20px;
+    --fzbtn: 11px;
+    --lhbtn: 13px;
   }
 }
 
@@ -95,7 +95,7 @@
 }
 @media (min-width: 768px) {
   :root {
-    --gallery-height: 275px;
+    --brands-height-half: 275px;
   }
 }
 @media (min-width: 1200px) {
@@ -119,7 +119,7 @@
 }
 @media (min-width: 768px) {
   :root {
-    --gallery-height: 900px;
+    --gallery-height: 575px;
   }
 }
 @media (min-width: 992px) {
@@ -681,6 +681,11 @@ table {
     width: calc(33% - 0.6666666667 * var(--psec));
   }
 }
+@media (max-width: 992px) {
+  .advantages__item {
+    width: calc(50% - 0.5 * var(--psec));
+  }
+}
 @media (max-width: 768px) {
   .advantages__item {
     width: 100%;
@@ -795,6 +800,9 @@ table {
 @media (max-width: 768px) {
   .description__col {
     width: 100%;
+  }
+  .description__col .contrast {
+    font-size: var(--fzh3);
   }
 }
 
@@ -1050,11 +1058,11 @@ table {
     margin-bottom: 0;
   }
 }
-.preview__text.__basic {
+.preview__text.basic {
   font-size: var(--fzl);
 }
 @media (max-width: 768px) {
-  .preview__text.__basic {
+  .preview__text.basic {
     margin-bottom: var(--psecs);
   }
 }
