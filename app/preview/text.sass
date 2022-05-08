@@ -1,6 +1,13 @@
+.preview__texts
+	gap: var(--p)
+	@media (max-width: $m)
+		max-width: 500px
+		margin-left: auto
+		margin-right: auto
+
 .preview__text
 	@media (min-width: $d)
-		width: 50%
+		width: calc(50% - var(--p))
 	@media (max-width: $m)
 		width: 100%
 		margin-bottom: 0
