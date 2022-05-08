@@ -1,9 +1,8 @@
 .advantages__heading
 	margin-bottom: var(--psec)
 	padding-top: var(--psec)
-	span
-		@media (min-width: $d)
-			display: block
+	text-align: center
+	width: 100%
 
 .advantages__items
 	gap: var(--psec)
@@ -17,10 +16,6 @@
 		width: calc(50% - (1 / 2) * var(--psec))
 	@media (max-width: $m)
 		width: 100%
-
-.advantages__heading span,
-.advantages__item
-	@media (max-width: $m)
 		max-width: 400px
 		margin-left: auto
 		margin-right: auto

@@ -674,11 +674,8 @@ table {
 .advantages__heading {
   margin-bottom: var(--psec);
   padding-top: var(--psec);
-}
-@media (min-width: 769px) {
-  .advantages__heading span {
-    display: block;
-  }
+  text-align: center;
+  width: 100%;
 }
 
 .advantages__items {
@@ -702,12 +699,6 @@ table {
 @media (max-width: 768px) {
   .advantages__item {
     width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .advantages__heading span,
-.advantages__item {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
